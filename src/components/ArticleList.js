@@ -1,8 +1,8 @@
 import React from "react";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useArticles from "@elevio/kb-kit/lib/hooks/useArticles";
-import * as Article from "@elevio/kb-kit/lib/toolkit/article";
-import * as Articles from "@elevio/kb-kit/lib/toolkit/articles";
+import * as Article from "@elevio/kb-kit/lib/components/article";
+import * as Articles from "@elevio/kb-kit/lib/components/articles";
 
 const ArticleList = ({ className }) => {
   const { totalCount } = useArticles();

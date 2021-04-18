@@ -1,9 +1,9 @@
 import * as React from "react";
-import * as Search from "@elevio/kb-kit/lib/toolkit/search";
-import * as SearchResults from "@elevio/kb-kit/lib/toolkit/searchResults";
-import { HomeLink } from "@elevio/kb-kit/lib/toolkit/meta";
+import * as Search from "@elevio/kb-kit/lib/components/search";
+import * as SearchResults from "@elevio/kb-kit/lib/components/searchResults";
+import { HomeLink } from "@elevio/kb-kit/lib/components/meta";
 import useSearchResults from "@elevio/kb-kit/lib/hooks/useSearchResults";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
 
 import PageLayout from "../components/layouts/Page";

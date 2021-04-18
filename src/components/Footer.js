@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import LoginLogout from "./LoginLogout";
 
 const Footer = ({ className }) => (

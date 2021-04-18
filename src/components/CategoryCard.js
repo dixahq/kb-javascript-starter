@@ -1,10 +1,10 @@
 import React from "react";
 import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useArticles from "@elevio/kb-kit/lib/hooks/useArticles";
 import useCategory from "@elevio/kb-kit/lib/hooks/useCategory";
-import * as Category from "@elevio/kb-kit/lib/toolkit/category";
-import * as Meta from "@elevio/kb-kit/lib/toolkit/meta";
+import * as Category from "@elevio/kb-kit/lib/components/category";
+import * as Meta from "@elevio/kb-kit/lib/components/meta";
 
 const CategoryCard = ({ categoryId, className }) => {
   const category = useCategory(categoryId);

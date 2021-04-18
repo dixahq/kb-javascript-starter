@@ -1,9 +1,9 @@
 import React from "react";
 import cx from "classnames";
 
-import * as Meta from "@elevio/kb-kit/lib/toolkit/meta";
-import * as Category from "@elevio/kb-kit/lib/toolkit/category";
-import * as Article from "@elevio/kb-kit/lib/toolkit/article";
+import * as Meta from "@elevio/kb-kit/lib/components/meta";
+import * as Category from "@elevio/kb-kit/lib/components/category";
+import * as Article from "@elevio/kb-kit/lib/components/article";
 
 const Breadcrumb = ({ className, crumbs, noLinks }) => (
   <div

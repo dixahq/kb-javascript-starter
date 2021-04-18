@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
-import * as Search from "@elevio/kb-kit/lib/toolkit/search";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
+import * as Search from "@elevio/kb-kit/lib/components/search";
 import useLanguages from "@elevio/kb-kit/lib/hooks/useLanguages";
 import { Logo } from "./Logo";
 import LoginLogout from "./LoginLogout";

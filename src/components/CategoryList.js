@@ -1,7 +1,7 @@
 import React from "react";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useSubCategories from "@elevio/kb-kit/lib/hooks/useSubCategories";
-import * as Category from "@elevio/kb-kit/lib/toolkit/category";
+import * as Category from "@elevio/kb-kit/lib/components/category";
 
 const CategoryList = ({ className }) => {
   const subCategories = useSubCategories();

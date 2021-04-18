@@ -1,9 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
-import useArticleFeedback, {
-  FeedbackFormShape,
-} from "@elevio/kb-kit/lib/hooks/useArticleFeedback";
+import useArticleFeedback from "@elevio/kb-kit/lib/hooks/useArticleFeedback";
 
 export const FeedbackInitial = ({
   className,
@@ -94,7 +92,6 @@ const MessageBox = ({ error, ...props }) => {
         className={cx("article-feedback-input", !!error && "invalid")}
         name="feedback"
         rows={8}
-        noResize
         placeholder={t("articleFeedback.feedbackPlaceholder", "How could this article be improved?")}
         data-testid="article-feedback-feedback-input"
         {...props}
@@ -109,8 +106,6 @@ const SubmitButton = ({ disabled }) => {
   const classes = cx("submit", { invalid: disabled });
   return (
     <button
-      appearance="primary"
-      size="compact"
       type="submit"
       className={cx("article-feedback-button", classes)}
       disabled={disabled}

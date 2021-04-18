@@ -1,9 +1,9 @@
 import * as React from "react";
 import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
-import * as Category from "@elevio/kb-kit/lib/toolkit/category";
-import * as Search from "@elevio/kb-kit/lib/toolkit/search";
-import * as Article from "@elevio/kb-kit/lib/toolkit/article";
-import * as Articles from "@elevio/kb-kit/lib/toolkit/articles";
+import * as Category from "@elevio/kb-kit/lib/components/category";
+import * as Search from "@elevio/kb-kit/lib/components/search";
+import * as Article from "@elevio/kb-kit/lib/components/article";
+import * as Articles from "@elevio/kb-kit/lib/components/articles";
 
 import PageLayout from "../components/layouts/Page";
 import Header from "../components/Header";
@@ -35,10 +35,12 @@ const Page = () => {
             <Articles.Loop>
               <Article.Link className="article-link" data-testid="article-link">
                 <div>
-                  <h3>
-                    <Article.Title className="article-link-title" />
+                  <h3 className="article-link-title">
+                    <Article.Title />
                   </h3>
-                  <Article.Summary className="article-link-summary" />
+                  <div className="article-link-summary">
+                    <Article.Summary />
+                  </div>
                 </div>
               </Article.Link>
             </Articles.Loop>

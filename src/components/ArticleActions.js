@@ -1,5 +1,5 @@
 import React from "react";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useCopy from "@elevio/kb-kit/lib/hooks/useCopy";
 
 const ArticleActions = () => {
