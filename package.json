@@ -1,6 +1,6 @@
 {
   "name": "@elevio/kb-javascript-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "This is a starter kit for Elevios KB builder project",
   "main": "src/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "repository": "https://github.com/elevio/kb-javascript-starter",
   "author": "kristian@elev.io",
   "dependencies": {
-    "@elevio/kb-kit": "^0.0.66",
+    "@elevio/kb-kit": "^0.0.70",
     "classnames": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
