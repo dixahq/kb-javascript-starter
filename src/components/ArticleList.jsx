@@ -1,10 +1,9 @@
-import React from "react";
-import { Trans } from "@elevio/kb-kit/lib/components/trans";
-import useArticles from "@elevio/kb-kit/lib/hooks/useArticles";
-import * as Article from "@elevio/kb-kit/lib/components/article";
-import * as Articles from "@elevio/kb-kit/lib/components/articles";
-
-const ArticleList = ({ className }) => {
+import React from 'react';
+import { Trans } from '@elevio/kb-kit/lib/components/trans';
+import useArticles from '@elevio/kb-kit/lib/hooks/useArticles';
+import * as Article from '@elevio/kb-kit/lib/components/article';
+import * as Articles from '@elevio/kb-kit/lib/components/articles';
+function ArticleList({ className }) {
   const { totalCount } = useArticles();
   if (totalCount === 0) return null;
   return (
@@ -17,7 +16,9 @@ const ArticleList = ({ className }) => {
           <>
             <Article.IsActive>
               <li className="article-list-item">
-                <strong><Article.Title /></strong>
+                <strong>
+                  <Article.Title />
+                </strong>
               </li>
             </Article.IsActive>
             <Article.IsNotActive>
@@ -32,6 +33,5 @@ const ArticleList = ({ className }) => {
       </ul>
     </div>
   );
-};
-
+}
 export default ArticleList;

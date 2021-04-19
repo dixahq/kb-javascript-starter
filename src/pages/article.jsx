@@ -1,26 +1,23 @@
-import * as React from "react";
-import * as Article from "@elevio/kb-kit/lib/components/article";
-import * as Search from "@elevio/kb-kit/lib/components/search";
-import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
-
-import PageLayout from "../components/layouts/Page";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
+import * as React from 'react';
+import * as Article from '@elevio/kb-kit/lib/components/article';
+import * as Search from '@elevio/kb-kit/lib/components/search';
+import useTranslation from '@elevio/kb-kit/lib/hooks/useTranslation';
+import PageLayout from '../components/layouts/Page';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import WithAsideLayout, {
   Aside,
   Main,
   MainHeader,
   MainBody,
-} from "../components/layouts/WithAside";
-import CategoryList from "../components/CategoryList";
-import ArticleList from "../components/ArticleList";
-import Breadcrumb from "../components/PageBreadcrumbs";
-import ArticleMeta from "../components/ArticleMeta";
-import ArticleActions from "../components/ArticleActions";
-import ArticleFeedback from "../components/ArticleFeedback";
-
-const Page = () => {
+} from '../components/layouts/WithAside';
+import CategoryList from '../components/CategoryList';
+import ArticleList from '../components/ArticleList';
+import Breadcrumb from '../components/PageBreadcrumbs';
+import ArticleMeta from '../components/ArticleMeta';
+import ArticleActions from '../components/ArticleActions';
+import ArticleFeedback from '../components/ArticleFeedback';
+function Page() {
   const { t } = useTranslation();
   return (
     <PageLayout header={<Header />} footer={<Footer />}>
@@ -44,7 +41,7 @@ const Page = () => {
         <Aside>
           <Search.Input
             className="sidebar-search"
-            placeholder={t("search.shortplaceholder", "Search...")}
+            placeholder={t('search.shortplaceholder', 'Search...')}
             data-testid="article-search-input"
           />
           <CategoryList />
@@ -53,5 +50,5 @@ const Page = () => {
       </WithAsideLayout>
     </PageLayout>
   );
-};
+}
 export default Page;

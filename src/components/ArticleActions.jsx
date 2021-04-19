@@ -1,8 +1,7 @@
-import React from "react";
-import { Trans } from "@elevio/kb-kit/lib/components/trans";
-import useCopy from "@elevio/kb-kit/lib/hooks/useCopy";
-
-const ArticleActions = () => {
+import React from 'react';
+import { Trans } from '@elevio/kb-kit/lib/components/trans';
+import useCopy from '@elevio/kb-kit/lib/hooks/useCopy';
+function ArticleActions() {
   const { onCopy, didCopy } = useCopy();
   return (
     <div className="article-actions">
@@ -43,6 +42,5 @@ const ArticleActions = () => {
       </button>
     </div>
   );
-};
-
+}
 export default ArticleActions;
