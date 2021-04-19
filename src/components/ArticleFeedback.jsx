@@ -95,7 +95,6 @@ const MessageBox = ({ error, ...props }) => {
         className={cx('article-feedback-input', !!error && 'invalid')}
         name="feedback"
         rows={8}
-        // noResize // TODO - ask Ben about this
         placeholder={t(
           'articleFeedback.feedbackPlaceholder',
           'How could this article be improved?'
@@ -112,8 +111,6 @@ const SubmitButton = ({ disabled }) => {
   const classes = cx('submit', { invalid: disabled });
   return (
     <button
-      // appearance="primary" // TODO - ask Ben about these
-      // size="compact" // TODO - ask Ben about these
       type="submit"
       className={cx('article-feedback-button', classes)}
       disabled={disabled}
