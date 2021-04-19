@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import Breadcrumb from "./SearchBreadcrumbs";
-import * as SearchResults from "@elevio/kb-kit/lib/toolkit/searchResults";
+import * as SearchResults from "@elevio/kb-kit/lib/components/searchResults";
 
 const SearchResult = ({ className, image }) => {
   return (

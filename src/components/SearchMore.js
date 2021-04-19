@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useSearchResults from "@elevio/kb-kit/lib/hooks/useSearchResults";
 
 const SearchMore = ({ className, ...props }) => {

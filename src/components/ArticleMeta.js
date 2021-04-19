@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import { formatDistance } from "date-fns";
 // import Avatar from "@elevio/styles/lib/components/Avatar";
 import useArticle from "@elevio/kb-kit/lib/hooks/useArticle";
@@ -8,6 +8,8 @@ import AccessBanner from "./AccessBanner";
 
 const ArticleMeta = ({ className }) => {
   const article = useArticle();
+  if (!article) return null;
+
   const relativeUpdated = formatDistance(article.lastUpdatedAt, Date.now());
 
   return (

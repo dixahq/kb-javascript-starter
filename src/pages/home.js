@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Trans } from "@elevio/kb-kit/lib/toolkit/trans";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
 import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
 
-import * as Search from "@elevio/kb-kit/lib/toolkit/search";
-import * as Categories from "@elevio/kb-kit/lib/toolkit/categories";
+import * as Search from "@elevio/kb-kit/lib/components/search";
+import * as Categories from "@elevio/kb-kit/lib/components/categories";
 import PageLayout from "../components/layouts/Page";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

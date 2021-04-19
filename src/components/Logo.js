@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import * as Meta from "@elevio/kb-kit/lib/toolkit/meta";
+import * as Meta from "@elevio/kb-kit/lib/components/meta";
 
 export const Logo = ({ children, className }) => (
   <Meta.HomeLink className={cx("nav-logo", className)} title="go to home page">

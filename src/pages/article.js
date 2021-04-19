@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as Article from "@elevio/kb-kit/lib/toolkit/article";
-import * as Search from "@elevio/kb-kit/lib/toolkit/search";
+import * as Article from "@elevio/kb-kit/lib/components/article";
+import * as Search from "@elevio/kb-kit/lib/components/search";
 import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
 
 import PageLayout from "../components/layouts/Page";
