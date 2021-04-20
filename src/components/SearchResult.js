@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import Breadcrumb from './SearchBreadcrumbs';
 import * as SearchResults from '@elevio/kb-kit/lib/components/searchResults';
+
 function SearchResult({ className, image }) {
   return (
     <SearchResults.ArticleLink className={cx('article-link', className)}>
@@ -16,4 +17,5 @@ function SearchResult({ className, image }) {
     </SearchResults.ArticleLink>
   );
 }
+
 export default SearchResult;

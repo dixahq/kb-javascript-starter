@@ -5,18 +5,18 @@ import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ErrorPage from '../components/ErrorPage';
+
 const Page = () => {
   const { t } = useTranslation();
   return (
     <PageLayout header={<Header />} footer={<Footer />}>
       <ErrorPage title={t('error.title', 'Whoops!')}>
         <p className="error-message">
-          <Trans i18nKey="error.problem">
-            Sorry, there has been a problem.
-          </Trans>
+          <Trans i18nKey="error.problem">Sorry, there has been a problem.</Trans>
         </p>
       </ErrorPage>
     </PageLayout>
   );
 };
+
 export default Page;

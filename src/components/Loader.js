@@ -1,5 +1,6 @@
 import React from 'react';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
+
 function Loader() {
   return (
     <div className="page-loader">
@@ -7,4 +8,5 @@ function Loader() {
     </div>
   );
 }
+
 export default Loader;

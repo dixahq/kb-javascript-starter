@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import { MainCentered } from '../components/layouts/Main';
 import SearchResult from '../components/SearchResult';
 import SearchMore from '../components/SearchMore';
+
 const Page = () => {
   const { t } = useTranslation();
   const { searchTerm, totalCount } = useSearchResults();
@@ -21,16 +22,23 @@ const Page = () => {
           <SearchResults.IsNotEmpty>
             <p>
               <Trans i18nKey="search.count" count={totalCount || 0}>
-                We found {{ count: totalCount }} articles for{' '}
-                <strong>"{{ searchTerm }}"</strong>
+                We found{' '}
+                {{
+                  count: totalCount,
+                }}{' '}
+                articles for{' '}
+                <strong>
+                  "
+                  {{
+                    searchTerm,
+                  }}
+                  "
+                </strong>
               </Trans>
             </p>
           </SearchResults.IsNotEmpty>
 
-          <Search.Input
-            className="hero-search"
-            placeholder={t('search.placeholder', 'Search our help centre...')}
-          />
+          <Search.Input className="hero-search" placeholder={t('search.placeholder', 'Search our help centre...')} />
         </Header>
       }
       footer={<Footer />}
@@ -60,4 +68,5 @@ const Page = () => {
     </PageLayout>
   );
 };
+
 export default Page;
