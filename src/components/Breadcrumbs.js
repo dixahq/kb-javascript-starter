@@ -11,7 +11,9 @@ function Breadcrumb({ className, crumbs, noLinks }) {
       {crumbs.map((crumb, index) => (
         <React.Fragment key={index}>
           <Crumb crumb={crumb} className="breadcrumbs-link" noLinks={noLinks} />
-          {index < crumbs.length - 1 && <span className="breadcrumbs-divider">/</span>}
+          {index < crumbs.length - 1 && (
+            <span className="breadcrumbs-divider">/</span>
+          )}
         </React.Fragment>
       ))}
     </div>

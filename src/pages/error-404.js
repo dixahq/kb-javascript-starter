@@ -13,10 +13,15 @@ function Page() {
     <PageLayout header={<Header />} footer={<Footer />}>
       <ErrorPage title={t('error.title', 'Whoops!')}>
         <p className="error-message">
-          <Trans i18nKey="error.404">The page you are looking for cannot be found.</Trans>
+          <Trans i18nKey="error.404">
+            The page you are looking for cannot be found.
+          </Trans>
         </p>
 
-        <Search.Input placeholder={t('search.placeholder', 'Search our help centre...')} className="error-search" />
+        <Search.Input
+          placeholder={t('search.placeholder', 'Search our help centre...')}
+          className="error-search"
+        />
 
         <p className="error-message">
           <Trans i18nKey="support.question">

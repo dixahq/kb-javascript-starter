@@ -7,7 +7,12 @@ import * as Articles from '@elevio/kb-kit/lib/components/articles';
 import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import WithAsideLayout, { Aside, Main, MainHeader, MainBody } from '../components/layouts/WithAside';
+import WithAsideLayout, {
+  Aside,
+  Main,
+  MainHeader,
+  MainBody,
+} from '../components/layouts/WithAside';
 import Breadcrumb from '../components/PageBreadcrumbs';
 import CategoryList from '../components/CategoryList';
 

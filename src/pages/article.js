@@ -5,7 +5,12 @@ import useTranslation from '@elevio/kb-kit/lib/hooks/useTranslation';
 import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import WithAsideLayout, { Aside, Main, MainHeader, MainBody } from '../components/layouts/WithAside';
+import WithAsideLayout, {
+  Aside,
+  Main,
+  MainHeader,
+  MainBody,
+} from '../components/layouts/WithAside';
 import CategoryList from '../components/CategoryList';
 import ArticleList from '../components/ArticleList';
 import Breadcrumb from '../components/PageBreadcrumbs';

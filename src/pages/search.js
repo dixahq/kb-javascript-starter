@@ -38,7 +38,10 @@ const Page = () => {
             </p>
           </SearchResults.IsNotEmpty>
 
-          <Search.Input className="hero-search" placeholder={t('search.placeholder', 'Search our help centre...')} />
+          <Search.Input
+            className="hero-search"
+            placeholder={t('search.placeholder', 'Search our help centre...')}
+          />
         </Header>
       }
       footer={<Footer />}

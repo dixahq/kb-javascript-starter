@@ -6,7 +6,11 @@ import * as Categories from '@elevio/kb-kit/lib/components/categories';
 import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { MainSection, GridContainer, GridItem } from '../components/layouts/Main';
+import {
+  MainSection,
+  GridContainer,
+  GridItem,
+} from '../components/layouts/Main';
 import CategoryCard from '../components/CategoryCard';
 
 const HomePage = () => {

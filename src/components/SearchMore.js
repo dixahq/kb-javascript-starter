@@ -7,7 +7,12 @@ function SearchMore({ className, ...props }) {
   const { isFetching, loadMore, hasMore } = useSearchResults();
   if (!hasMore) return null;
   return (
-    <button className={cx('show-more', className)} disabled={isFetching || !hasMore} onClick={loadMore} {...props}>
+    <button
+      className={cx('show-more', className)}
+      disabled={isFetching || !hasMore}
+      onClick={loadMore}
+      {...props}
+    >
       <Trans i18nKey="search.loadmore">Load more</Trans>
       {isFetching && '...'}
     </button>
