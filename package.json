@@ -12,8 +12,8 @@
     "save": "elevio-kb save-version",
     "deploy": "elevio-kb publish-version"
   },
-  "repository": "https://github.com/elevio/kb-javascript-starter",
-  "author": "kristian@elev.io",
+  "repository": "https://github.com/dixahq/kb-javascript-starter",
+  "author": "support@elev.io",
   "dependencies": {
     "@elevio/kb-kit": "^0.0.70",
     "classnames": "^2.3.1",

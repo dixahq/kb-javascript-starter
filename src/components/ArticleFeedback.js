@@ -1,24 +1,27 @@
-import React from "react";
-import cx from "classnames";
-import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
-import useArticleFeedback from "@elevio/kb-kit/lib/hooks/useArticleFeedback";
-
-export const FeedbackInitial = ({
+import React from 'react';
+import cx from 'classnames';
+import useTranslation from '@elevio/kb-kit/lib/hooks/useTranslation';
+import useArticleFeedback, {
+  IFeedbackForm,
+} from '@elevio/kb-kit/lib/hooks/useArticleFeedback';
+export function FeedbackInitial({
   className,
   title,
   onPositive,
   onNegative,
   isLoading,
-}) => {
+}) {
   const { t } = useTranslation();
   const defaultTitle = t(
-    "articleFeedback.question",
-    "Did this article help solve your problem?"
+    'articleFeedback.question',
+    'Did this article help solve your problem?'
   );
+
   const _title = title || defaultTitle;
+
   return (
     <div
-      className={cx("article-feedback", className)}
+      className={cx('article-feedback', className)}
       data-testid="article-feedback"
     >
       <h3 className="article-feedback-title">{_title}</h3>
@@ -30,7 +33,7 @@ export const FeedbackInitial = ({
           disabled={isLoading}
           data-testid="article-feedback-positive"
         >
-          {t("articleFeedback.positive", "Yes")}
+          {t('articleFeedback.positive', 'Yes')}
         </button>
         <button
           className="article-feedback-button"
@@ -39,43 +42,52 @@ export const FeedbackInitial = ({
           disabled={isLoading}
           data-testid="article-feedback-negative"
         >
-          {t("articleFeedback.negative", "No")}
+          {t('articleFeedback.negative', 'No')}
         </button>
       </div>
     </div>
   );
-};
+}
 
 const FeedbackError = ({ className }) => {
   const { t } = useTranslation();
   return (
-    <div className={cx("article-feedback", className)}>
-        {t("articleFeedback.error", "Sorry there has been a problem, please try again.")}
+    <div className={cx('article-feedback', className)}>
+      {t(
+        'articleFeedback.error',
+        'Sorry there has been a problem, please try again.'
+      )}
     </div>
   );
-}
+};
 
 export const FeedbackSuccess = ({ className }) => {
   const { t } = useTranslation();
   return (
-    <div className={cx("article-feedback", className)}>{t("articleFeedback.thanksMsg", "Thanks for submitting your feedback!")}</div>
+    <div className={cx('article-feedback', className)}>
+      {t('articleFeedback.thanksMsg', 'Thanks for submitting your feedback!')}
+    </div>
   );
 };
 
-const ErrorMessage = ({ error }) => {
+function ErrorMessage({ error }) {
   if (!error) return null;
-  return <div className="article-feedback-message" data-testid={error}>{error}</div>;
-};
+  return (
+    <div className="article-feedback-message" data-testid={error}>
+      {error}
+    </div>
+  );
+}
 
 const EmailBox = ({ error, ...props }) => {
   const { t } = useTranslation();
   return (
     <>
       <input
-        className={cx("article-feedback-input", !!error && "invalid")}
+        className={cx('article-feedback-input', !!error && 'invalid')}
         type="email"
         name="email"
-        placeholder={t("articleFeedback.emailPlaceholder", "Email (optional)")}
+        placeholder={t('articleFeedback.emailPlaceholder', 'Email (optional)')}
         data-testid="article-feedback-email-input"
         {...props}
       />
@@ -89,10 +101,13 @@ const MessageBox = ({ error, ...props }) => {
   return (
     <>
       <textarea
-        className={cx("article-feedback-input", !!error && "invalid")}
+        className={cx('article-feedback-input', !!error && 'invalid')}
         name="feedback"
         rows={8}
-        placeholder={t("articleFeedback.feedbackPlaceholder", "How could this article be improved?")}
+        placeholder={t(
+          'articleFeedback.feedbackPlaceholder',
+          'How could this article be improved?'
+        )}
         data-testid="article-feedback-feedback-input"
         {...props}
       />
@@ -103,21 +118,23 @@ const MessageBox = ({ error, ...props }) => {
 
 const SubmitButton = ({ disabled }) => {
   const { t } = useTranslation();
-  const classes = cx("submit", { invalid: disabled });
+  const classes = cx('submit', {
+    invalid: disabled,
+  });
   return (
     <button
       type="submit"
-      className={cx("article-feedback-button", classes)}
+      className={cx('article-feedback-button', classes)}
       disabled={disabled}
       data-testid="article-feedback-submit-button"
     >
-      {t("articleFeedback.submit", "Submit")}
+      {t('articleFeedback.submit', 'Submit')}
     </button>
-  );
-  // return null;
+  ); // return null;
 };
 
-export const FeedbackForm = ({
+export function FeedbackForm({
+  hasSubmitted,
   className,
   isSubmitting,
   isEmailHidden,
@@ -129,13 +146,19 @@ export const FeedbackForm = ({
   handleEmailChange,
   handleMessageChange,
   onSubmit,
-}) => {
+}) {
   const { t } = useTranslation();
-
   return (
-    <form className={cx("article-feedback", className)} onSubmit={onSubmit} noValidate>
+    <form
+      className={cx('article-feedback', className)}
+      onSubmit={onSubmit}
+      noValidate
+    >
       <h3 className="article-feedback-title">
-          {t("articleFeedback.negativeQuestion", "Sorry this article did not help. We would love your feedback.")}
+        {t(
+          'articleFeedback.negativeQuestion',
+          'Sorry this article did not help. We would love your feedback.'
+        )}
       </h3>
 
       <MessageBox
@@ -156,7 +179,10 @@ export const FeedbackForm = ({
 
       {showAnonymousWarning && (
         <p className="article-feedback-message">
-            {t("articleFeedback.confirmAnon", "Are you sure you want to send this anonymously?")}
+          {t(
+            'articleFeedback.confirmAnon',
+            'Are you sure you want to send this anonymously?'
+          )}
         </p>
       )}
 
@@ -171,15 +197,15 @@ export const FeedbackForm = ({
             data-testid="article-feedback-skip-button"
             type="button"
           >
-            {t("articleFeedback.skip", "Skip and send")}
+            {t('articleFeedback.skip', 'Skip and send')}
           </button>
         )}
       </div>
     </form>
   );
-};
+}
 
-const ArticleFeedback = ({ className }) => {
+function ArticleFeedback({ className }) {
   const {
     stage,
     isFeedbackEnabled,
@@ -197,15 +223,14 @@ const ArticleFeedback = ({ className }) => {
     onFeedbackSkipped,
     handleMessageChange,
     handleEmailChange,
-  } = useArticleFeedback();
-
-  // return null;
+  } = useArticleFeedback(); // return null;
 
   if (!isFeedbackEnabled) return null;
-  if (stage === "error") return <FeedbackError className={className} />;
-  if (stage === "positive" || stage === "submitted")
+  if (stage === 'error') return <FeedbackError className={className} />;
+  if (stage === 'positive' || stage === 'submitted')
     return <FeedbackSuccess className={className} />;
-  if (stage === "negative") {
+
+  if (stage === 'negative') {
     return (
       <FeedbackForm
         className={className}
@@ -223,6 +248,7 @@ const ArticleFeedback = ({ className }) => {
       />
     );
   }
+
   return (
     <FeedbackInitial
       className={className}
@@ -231,6 +257,6 @@ const ArticleFeedback = ({ className }) => {
       isLoading={isLoading}
     />
   );
-};
+}
 
 export default ArticleFeedback;

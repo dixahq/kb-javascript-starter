@@ -1,17 +1,16 @@
-import * as React from "react";
-import * as Search from "@elevio/kb-kit/lib/components/search";
-import * as SearchResults from "@elevio/kb-kit/lib/components/searchResults";
-import { HomeLink } from "@elevio/kb-kit/lib/components/meta";
-import useSearchResults from "@elevio/kb-kit/lib/hooks/useSearchResults";
-import { Trans } from "@elevio/kb-kit/lib/components/trans";
-import useTranslation from "@elevio/kb-kit/lib/hooks/useTranslation";
-
-import PageLayout from "../components/layouts/Page";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { MainCentered } from "../components/layouts/Main";
-import SearchResult from "../components/SearchResult";
-import SearchMore from "../components/SearchMore";
+import * as React from 'react';
+import * as Search from '@elevio/kb-kit/lib/components/search';
+import * as SearchResults from '@elevio/kb-kit/lib/components/searchResults';
+import { HomeLink } from '@elevio/kb-kit/lib/components/meta';
+import useSearchResults from '@elevio/kb-kit/lib/hooks/useSearchResults';
+import { Trans } from '@elevio/kb-kit/lib/components/trans';
+import useTranslation from '@elevio/kb-kit/lib/hooks/useTranslation';
+import PageLayout from '../components/layouts/Page';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { MainCentered } from '../components/layouts/Main';
+import SearchResult from '../components/SearchResult';
+import SearchMore from '../components/SearchMore';
 
 const Page = () => {
   const { t } = useTranslation();
@@ -23,15 +22,25 @@ const Page = () => {
           <SearchResults.IsNotEmpty>
             <p>
               <Trans i18nKey="search.count" count={totalCount || 0}>
-                We found {{ count: totalCount }} articles for{" "}
-                <strong>"{{ searchTerm }}"</strong>
+                We found{' '}
+                {{
+                  count: totalCount,
+                }}{' '}
+                articles for{' '}
+                <strong>
+                  "
+                  {{
+                    searchTerm,
+                  }}
+                  "
+                </strong>
               </Trans>
             </p>
           </SearchResults.IsNotEmpty>
 
           <Search.Input
             className="hero-search"
-            placeholder={t("search.placeholder", "Search our help centre...")}
+            placeholder={t('search.placeholder', 'Search our help centre...')}
           />
         </Header>
       }
