@@ -1,18 +1,15 @@
-import React from 'react';
-import cx from 'classnames';
-import { Trans } from '@elevio/kb-kit/lib/components/trans';
-import { formatDistance } from 'date-fns'; // import Avatar from "@elevio/styles/lib/components/Avatar";
-
-import useArticle from '@elevio/kb-kit/lib/hooks/useArticle';
-import AccessBanner from './AccessBanner';
+import React from "react";
+import cx from "classnames";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
+import { useArticle } from "@elevio/kb-kit/lib/hooks";
+import AccessBanner from "./AccessBanner";
 
 function ArticleMeta({ className }) {
   const article = useArticle();
   if (!article) return null;
-  const relativeUpdated = formatDistance(article.lastUpdatedAt, Date.now());
   return (
     <>
-      <div className={cx('article-meta', className)}>
+      <div className={cx("article-meta", className)}>
         <div className="article-meta-item">
           <svg
             className="article-meta-icon"
@@ -24,7 +21,7 @@ function ArticleMeta({ className }) {
           </svg>
           <div className="article-meta-label">
             <Trans i18nKey="article.writtenBy">
-              Written By{' '}
+              Written By{" "}
               {{
                 name: article.author.name,
               }}
@@ -42,7 +39,7 @@ function ArticleMeta({ className }) {
           </svg>
           <div className="article-meta-label">
             <Trans i18nKey="article.lastUpdated">
-              Last updated {relativeUpdated} ago
+              Last updated {{ relativeUpdated: article.lastPublishedAgo }}
             </Trans>
           </div>
         </div>

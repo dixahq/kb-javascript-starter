@@ -15,11 +15,12 @@
   "repository": "https://github.com/dixahq/kb-javascript-starter",
   "author": "support@elev.io",
   "dependencies": {
-    "@elevio/kb-kit": "^0.0.70",
+    "@elevio/kb-kit": "^0.0.74",
     "classnames": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-transition-group": "^4.4.1"
   },
   "license": "MIT",
   "private": true

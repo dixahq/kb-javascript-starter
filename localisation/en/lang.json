@@ -20,7 +20,7 @@
   "article": {
     "relatedTitle": "Related Articles",
     "writtenBy": "Written By {{name}}",
-    "lastUpdated": "Last updated {relativeUpdated} ago"
+    "lastUpdated": "Last updated {{relativeUpdated}}"
   },
   "categorycard": {
     "categoriesCount": "{{count}} Categories",
@@ -60,6 +60,12 @@
   "home": {
     "welcome": "Welcome to the elevio help center. <1></1>Here you will find documentation on how to use our product."
   },
+  "notification": {
+    "loggedIn": "Logged in.",
+    "loggedOut": "Logged out.",
+    "generalError": "Sorry something went wrong, please try again. \n({{notificationKey}})",
+    "loginError": "Sorry, please try again. {{notificationKey}} (error code {{errorCode}})"
+  },
   "pageTitles": {
     "error": "Error",
     "error404": "Page Not Found",
@@ -69,12 +75,10 @@
     "home": "Help Centre",
     "search": "Search"
   },
-  "notification": {
-    "loggedIn": "Logged in.",
-    "loggedOut": "Logged out.",
-    "generalError": "Sorry something went wrong, please try again. \n({{notificationKey}})",
-    "loginError": "Sorry, please try again. {{notificationKey}} (error code {{errorCode}})"
-  },
   "required": "Required",
-  "invalid_email": "Invalid email"
+  "invalid_email": "Invalid email",
+  "messages": {
+    "goodbye": "So long!",
+    "hello": "Oh hello there!"
+  }
 }

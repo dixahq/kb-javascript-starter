@@ -1,10 +1,9 @@
-import React from 'react';
-import cx from 'classnames';
-import { Trans } from '@elevio/kb-kit/lib/components/trans';
-import useArticles from '@elevio/kb-kit/lib/hooks/useArticles';
-import useCategory from '@elevio/kb-kit/lib/hooks/useCategory';
-import * as Category from '@elevio/kb-kit/lib/components/category';
-import * as Meta from '@elevio/kb-kit/lib/components/meta';
+import React from "react";
+import cx from "classnames";
+import { Trans } from "@elevio/kb-kit/lib/components/trans";
+import * as Category from "@elevio/kb-kit/lib/components/category";
+import * as Meta from "@elevio/kb-kit/lib/components/meta";
+import { useArticles, useCategory } from "@elevio/kb-kit/lib/hooks";
 
 function CategoryCard({ categoryId, className }) {
   const category = useCategory(categoryId);
@@ -13,7 +12,7 @@ function CategoryCard({ categoryId, className }) {
   const subCategoriesCount = (category.subCategories || []).length;
   return (
     <Category.Link
-      className={cx('card', className)}
+      className={cx("card", className)}
       data-testid="category-link"
     >
       <svg className="card-icon" width="24" height="24" viewBox="0 0 24 24">
@@ -29,21 +28,21 @@ function CategoryCard({ categoryId, className }) {
           >
             {{
               count: subCategoriesCount,
-            }}{' '}
+            }}{" "}
             Categories
           </Trans>
         </Meta.If>
         <Meta.If
           test={subCategoriesCount > 0 && !!totalCount && totalCount > 0}
         >
-          {' '}
-          &amp;{' '}
+          {" "}
+          &amp;{" "}
         </Meta.If>
         <Meta.If test={!!totalCount && totalCount > 0}>
           <Trans i18nKey="categorycard.articlesCount" count={totalCount || 0}>
             {{
               count: totalCount,
-            }}{' '}
+            }}{" "}
             Articles
           </Trans>
         </Meta.If>

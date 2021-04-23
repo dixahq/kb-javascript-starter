@@ -1,4 +1,9 @@
 {
+  "internal": {
+    "restricted": "For internal use, with restrictions",
+    "unrestricted": "For internal use"
+  },
+  "copied": "Copied",
   "articleFeedback": {
     "question": "Did this article help solve your problem?",
     "positive": "Yes",
@@ -12,24 +17,48 @@
     "confirmAnon": "Are you sure you want to send this anonymously?",
     "skip": "Skip and send"
   },
-  "error": {
-    "defaultTitle": "There was an error.",
-    "title": "Whoops!"
+  "article": {
+    "relatedTitle": "Related Articles",
+    "writtenBy": "Written By {{name}}",
+    "lastUpdated": "Last updated {{relativeUpdated}}"
   },
+  "categorycard": {
+    "categoriesCount": "{{count}} Categories",
+    "categoriesCount_plural": "{{count}} Categories",
+    "articlesCount": "{{count}} Articles",
+    "articlesCount_plural": "{{count}} Articles"
+  },
+  "category": {
+    "listTitle": "Categories"
+  },
+  "error": {
+    "404": "The page you are looking for cannot be found.",
+    "defaultTitle": "",
+    "auth": "The article you have requested is restricted to logged in users. If you have an account, <1>login here</1>.",
+    "title": "Whoops!",
+    "problem": "Sorry, there has been a problem."
+  },
+  "external-link": "Our Site",
+  "header": {
+    "title": "Help Centre"
+  },
+  "loading": "Loading",
   "login": "Log in",
   "logout": "Log out",
   "search": {
+    "loadmore": "Load more",
     "shortplaceholder": "Search...",
-    "placeholder": "Search our help centre..."
+    "placeholder": "Search our help centre...",
+    "count": "We found {{count}} articles for <6>\"{{searchTerm}}\"</6>",
+    "count_plural": "We found {{count}} articles for <6>\"{{searchTerm}}\"</6>",
+    "noResults": "Sorry we couldn’t find anything for “<1></1>”",
+    "tryAgain": "Try another search or <1>Browse by category</1>"
   },
-  "pageTitles": {
-    "error": "Error",
-    "error404": "Page Not Found",
-    "article": "{{article.title}}",
-    "category": "{{category.title}}",
-    "error401": "Access Denied",
-    "home": "Help Centre",
-    "search": "Search"
+  "support": {
+    "question": "Need more help? <2>Submit a support request</2>"
+  },
+  "home": {
+    "welcome": "Welcome to the elevio help center. <1></1>Here you will find documentation on how to use our product."
   },
   "notification": {
     "loggedIn": "Logged in.",
@@ -37,6 +66,19 @@
     "generalError": "Sorry something went wrong, please try again. \n({{notificationKey}})",
     "loginError": "Sorry, please try again. {{notificationKey}} (error code {{errorCode}})"
   },
+  "pageTitles": {
+    "error": "",
+    "error404": "",
+    "article": "{{article.title}}",
+    "category": "{{category.title}}",
+    "error401": "",
+    "home": "",
+    "search": ""
+  },
   "required": "Required",
-  "invalid_email": "Invalid email"
+  "invalid_email": "Invalid email",
+  "messages": {
+    "goodbye": "So long!",
+    "hello": "Oh hello there!"
+  }
 }
