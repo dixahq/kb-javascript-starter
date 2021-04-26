@@ -810,3 +810,21 @@ button {
   right: 0;
   top: 0;
 }
+
+/* LOADING BAR */
+.loading-bar {
+  background-color: blue;
+  box-shadow: rgb(0, 102, 255) 0px 1px 5px 2px;
+  position: fixed;
+  height: 2px;
+  top: 0;
+  transition-property: opacity, transform, visibility;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+  width: 100%;
+  will-change: opacity, transform, visibility;
+}
+.loading-bar.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
