@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Increased version number to match [kb-typescript-starter](https://github.com/dixahq/kb-typescript-starter).
 - `LoadingBar.tsx` - much simpler loading styles. Removed dependencies.
 - `main.css` - added Loading Bar styles
 
