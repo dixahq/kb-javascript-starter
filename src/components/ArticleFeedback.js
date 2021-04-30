@@ -1,6 +1,6 @@
-import React from "react";
-import cx from "classnames";
-import { useTranslation, useArticleFeedback } from "@elevio/kb-kit/lib/hooks";
+import React from 'react';
+import cx from 'classnames';
+import { useTranslation, useArticleFeedback } from '@elevio/kb-kit/lib/hooks';
 export function FeedbackInitial({
   className,
   title,
@@ -10,15 +10,15 @@ export function FeedbackInitial({
 }) {
   const { t } = useTranslation();
   const defaultTitle = t(
-    "articleFeedback.question",
-    "Did this article help solve your problem?"
+    'articleFeedback.question',
+    'Did this article help solve your problem?'
   );
 
   const _title = title || defaultTitle;
 
   return (
     <div
-      className={cx("article-feedback", className)}
+      className={cx('article-feedback', className)}
       data-testid="article-feedback"
     >
       <h3 className="article-feedback-title">{_title}</h3>
@@ -30,7 +30,7 @@ export function FeedbackInitial({
           disabled={isLoading}
           data-testid="article-feedback-positive"
         >
-          {t("articleFeedback.positive", "Yes")}
+          {t('articleFeedback.positive', 'Yes')}
         </button>
         <button
           className="article-feedback-button"
@@ -39,7 +39,7 @@ export function FeedbackInitial({
           disabled={isLoading}
           data-testid="article-feedback-negative"
         >
-          {t("articleFeedback.negative", "No")}
+          {t('articleFeedback.negative', 'No')}
         </button>
       </div>
     </div>
@@ -49,10 +49,10 @@ export function FeedbackInitial({
 const FeedbackError = ({ className }) => {
   const { t } = useTranslation();
   return (
-    <div className={cx("article-feedback", className)}>
+    <div className={cx('article-feedback', className)}>
       {t(
-        "articleFeedback.error",
-        "Sorry there has been a problem, please try again."
+        'articleFeedback.error',
+        'Sorry there has been a problem, please try again.'
       )}
     </div>
   );
@@ -61,8 +61,8 @@ const FeedbackError = ({ className }) => {
 export const FeedbackSuccess = ({ className }) => {
   const { t } = useTranslation();
   return (
-    <div className={cx("article-feedback", className)}>
-      {t("articleFeedback.thanksMsg", "Thanks for submitting your feedback!")}
+    <div className={cx('article-feedback', className)}>
+      {t('articleFeedback.thanksMsg', 'Thanks for submitting your feedback!')}
     </div>
   );
 };
@@ -81,10 +81,10 @@ const EmailBox = ({ error, ...props }) => {
   return (
     <>
       <input
-        className={cx("article-feedback-input", !!error && "invalid")}
+        className={cx('article-feedback-input', !!error && 'invalid')}
         type="email"
         name="email"
-        placeholder={t("articleFeedback.emailPlaceholder", "Email (optional)")}
+        placeholder={t('articleFeedback.emailPlaceholder', 'Email (optional)')}
         data-testid="article-feedback-email-input"
         {...props}
       />
@@ -98,12 +98,12 @@ const MessageBox = ({ error, ...props }) => {
   return (
     <>
       <textarea
-        className={cx("article-feedback-input", !!error && "invalid")}
+        className={cx('article-feedback-input', !!error && 'invalid')}
         name="feedback"
         rows={8}
         placeholder={t(
-          "articleFeedback.feedbackPlaceholder",
-          "How could this article be improved?"
+          'articleFeedback.feedbackPlaceholder',
+          'How could this article be improved?'
         )}
         data-testid="article-feedback-feedback-input"
         {...props}
@@ -115,17 +115,17 @@ const MessageBox = ({ error, ...props }) => {
 
 const SubmitButton = ({ disabled }) => {
   const { t } = useTranslation();
-  const classes = cx("submit", {
+  const classes = cx('submit', {
     invalid: disabled,
   });
   return (
     <button
       type="submit"
-      className={cx("article-feedback-button", classes)}
+      className={cx('article-feedback-button', classes)}
       disabled={disabled}
       data-testid="article-feedback-submit-button"
     >
-      {t("articleFeedback.submit", "Submit")}
+      {t('articleFeedback.submit', 'Submit')}
     </button>
   ); // return null;
 };
@@ -147,14 +147,14 @@ export function FeedbackForm({
   const { t } = useTranslation();
   return (
     <form
-      className={cx("article-feedback", className)}
+      className={cx('article-feedback', className)}
       onSubmit={onSubmit}
       noValidate
     >
       <h3 className="article-feedback-title">
         {t(
-          "articleFeedback.negativeQuestion",
-          "Sorry this article did not help. We would love your feedback."
+          'articleFeedback.negativeQuestion',
+          'Sorry this article did not help. We would love your feedback.'
         )}
       </h3>
 
@@ -177,8 +177,8 @@ export function FeedbackForm({
       {showAnonymousWarning && (
         <p className="article-feedback-message">
           {t(
-            "articleFeedback.confirmAnon",
-            "Are you sure you want to send this anonymously?"
+            'articleFeedback.confirmAnon',
+            'Are you sure you want to send this anonymously?'
           )}
         </p>
       )}
@@ -194,7 +194,7 @@ export function FeedbackForm({
             data-testid="article-feedback-skip-button"
             type="button"
           >
-            {t("articleFeedback.skip", "Skip and send")}
+            {t('articleFeedback.skip', 'Skip and send')}
           </button>
         )}
       </div>
@@ -223,11 +223,11 @@ function ArticleFeedback({ className }) {
   } = useArticleFeedback(); // return null;
 
   if (!isFeedbackEnabled) return null;
-  if (stage === "error") return <FeedbackError className={className} />;
-  if (stage === "positive" || stage === "submitted")
+  if (stage === 'error') return <FeedbackError className={className} />;
+  if (stage === 'positive' || stage === 'submitted')
     return <FeedbackSuccess className={className} />;
 
-  if (stage === "negative") {
+  if (stage === 'negative') {
     return (
       <FeedbackForm
         className={className}

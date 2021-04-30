@@ -1,20 +1,20 @@
-import * as React from "react";
-import { useTranslation } from "@elevio/kb-kit/lib/hooks";
-import * as Category from "@elevio/kb-kit/lib/components/category";
-import * as Search from "@elevio/kb-kit/lib/components/search";
-import * as Article from "@elevio/kb-kit/lib/components/article";
-import * as Articles from "@elevio/kb-kit/lib/components/articles";
-import PageLayout from "../components/layouts/Page";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import * as React from 'react';
+import { useTranslation } from '@elevio/kb-kit/lib/hooks';
+import * as Category from '@elevio/kb-kit/lib/components/category';
+import * as Search from '@elevio/kb-kit/lib/components/search';
+import * as Article from '@elevio/kb-kit/lib/components/article';
+import * as Articles from '@elevio/kb-kit/lib/components/articles';
+import PageLayout from '../components/layouts/Page';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import WithAsideLayout, {
   Aside,
   Main,
   MainHeader,
   MainBody,
-} from "../components/layouts/WithAside";
-import Breadcrumb from "../components/PageBreadcrumbs";
-import CategoryList from "../components/CategoryList";
+} from '../components/layouts/WithAside';
+import Breadcrumb from '../components/PageBreadcrumbs';
+import CategoryList from '../components/CategoryList';
 
 function Page() {
   const { t } = useTranslation();
@@ -48,7 +48,7 @@ function Page() {
         <Aside>
           <Search.Input
             className="sidebar-search"
-            placeholder={t("search.shortplaceholder", "Search...")}
+            placeholder={t('search.shortplaceholder', 'Search...')}
             data-testid="category-search-input"
           />
           <CategoryList />
