@@ -1,12 +1,18 @@
 /* RESET */
 body {
-  background-color: #FFF;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 24px;
   margin: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: initial;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -20,7 +26,7 @@ svg {
   display: block;
   fill-rule: evenodd;
 }
-input, 
+input,
 textarea,
 select {
   appearance: none;
@@ -61,7 +67,7 @@ button {
 
 /* HEADER */
 .header {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 /* NAV */
@@ -132,7 +138,7 @@ button {
   position: relative;
 }
 .language-picker-input {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 6px;
   cursor: pointer;
   display: flex;
@@ -140,7 +146,7 @@ button {
   position: relative;
 }
 .language-picker-input::before {
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: inherit;
   bottom: 0;
   content: '';
@@ -183,10 +189,10 @@ button {
 }
 .language-picker-list {
   -webkit-overflow-scrolling: touch;
-  background-color: #FFF;
-  border: thin solid #CCC;
+  background-color: #fff;
+  border: thin solid #ccc;
   border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -211,7 +217,7 @@ button {
   position: relative;
 }
 .language-picker-item:hover {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 @media screen and (min-width: 1024px) {
   .language-picker {
@@ -231,12 +237,12 @@ button {
   width: 80%;
 }
 .hero-search {
-  background-color: #FFF;
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.16666 3.33341C5.945 3.33341 3.33332 5.94509 3.33332 9.16675C3.33332 12.3884 5.945 15.0001 9.16666 15.0001C10.7777 15.0001 12.2349 14.3481 13.2914 13.2915C14.348 12.235 15 10.7778 15 9.16675C15 5.94509 12.3883 3.33341 9.16666 3.33341ZM1.66666 9.16675C1.66666 5.02461 5.02452 1.66675 9.16666 1.66675C13.3088 1.66675 16.6667 5.02461 16.6667 9.16675C16.6667 10.9373 16.0524 12.5654 15.0265 13.8481L18.0892 16.9108C18.4147 17.2363 18.4147 17.7639 18.0892 18.0893C17.7638 18.4148 17.2362 18.4148 16.9107 18.0893L13.848 15.0266C12.5653 16.0525 10.9372 16.6667 9.16666 16.6667C5.02452 16.6667 1.66666 13.3089 1.66666 9.16675Z' fill='%2374808A'/%3E%3C/svg%3E%0A");
   background-position: 16px center;
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: 6px;
   display: inline-block;
   padding: 16px 24px 16px 44px;
@@ -274,12 +280,12 @@ button {
   width: 80%;
 }
 .mobile-search-input {
-  background-color: #FFF;
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.16666 3.33341C5.945 3.33341 3.33332 5.94509 3.33332 9.16675C3.33332 12.3884 5.945 15.0001 9.16666 15.0001C10.7777 15.0001 12.2349 14.3481 13.2914 13.2915C14.348 12.235 15 10.7778 15 9.16675C15 5.94509 12.3883 3.33341 9.16666 3.33341ZM1.66666 9.16675C1.66666 5.02461 5.02452 1.66675 9.16666 1.66675C13.3088 1.66675 16.6667 5.02461 16.6667 9.16675C16.6667 10.9373 16.0524 12.5654 15.0265 13.8481L18.0892 16.9108C18.4147 17.2363 18.4147 17.7639 18.0892 18.0893C17.7638 18.4148 17.2362 18.4148 16.9107 18.0893L13.848 15.0266C12.5653 16.0525 10.9372 16.6667 9.16666 16.6667C5.02452 16.6667 1.66666 13.3089 1.66666 9.16675Z' fill='%2374808A'/%3E%3C/svg%3E%0A");
   background-position: 16px center;
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: 6px;
   font-size: 14px;
   line-height: 20px;
@@ -337,7 +343,7 @@ button {
 
 /* CARD */
 .card {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -357,7 +363,7 @@ button {
   color: #000;
 }
 .card-divider {
-  background-color: #CCC;
+  background-color: #ccc;
   height: 1px;
   margin: 32px auto 16px auto;
   width: 64px;
@@ -435,7 +441,7 @@ button {
 @media screen and (min-width: 1024px) {
   .main-content-card {
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,.04), 0 8px 32px rgba(0,0,0,.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.08);
     padding: 32px;
   }
 }
@@ -463,7 +469,7 @@ button {
   background-color: #333;
   border-radius: 4px;
   bottom: 100%;
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   left: 50%;
   padding: 4px 12px;
@@ -492,12 +498,12 @@ button {
 
 /* SIDEBAR SEARCH */
 .sidebar-search {
-  background-color: #FFF;
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.16666 3.33341C5.945 3.33341 3.33332 5.94509 3.33332 9.16675C3.33332 12.3884 5.945 15.0001 9.16666 15.0001C10.7777 15.0001 12.2349 14.3481 13.2914 13.2915C14.348 12.235 15 10.7778 15 9.16675C15 5.94509 12.3883 3.33341 9.16666 3.33341ZM1.66666 9.16675C1.66666 5.02461 5.02452 1.66675 9.16666 1.66675C13.3088 1.66675 16.6667 5.02461 16.6667 9.16675C16.6667 10.9373 16.0524 12.5654 15.0265 13.8481L18.0892 16.9108C18.4147 17.2363 18.4147 17.7639 18.0892 18.0893C17.7638 18.4148 17.2362 18.4148 16.9107 18.0893L13.848 15.0266C12.5653 16.0525 10.9372 16.6667 9.16666 16.6667C5.02452 16.6667 1.66666 13.3089 1.66666 9.16675Z' fill='%2374808A'/%3E%3C/svg%3E%0A");
   background-position: 16px center;
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: 6px;
   display: none;
   font-size: 14px;
@@ -533,7 +539,7 @@ button {
 
 /* ARTICLE LINK */
 .article-link {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   color: inherit;
   display: flex;
   outline: none;
@@ -544,7 +550,7 @@ button {
   margin-block-start: 32px;
 }
 .article-link:hover {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 .article-link-breadcrumbs {
   margin-block-end: 8px;
@@ -608,7 +614,7 @@ button {
 
 /* SHOW MORE */
 .show-more {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   font-weight: 500;
   margin-block-start: 32px;
   margin-inline-start: auto;
@@ -616,7 +622,7 @@ button {
   padding: 16px 20px;
 }
 .show-more:disabled {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* ERROR */
@@ -633,12 +639,12 @@ button {
   margin-block-start: 24px;
 }
 .error-search {
-  background-color: #FFF;
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.16666 3.33341C5.945 3.33341 3.33332 5.94509 3.33332 9.16675C3.33332 12.3884 5.945 15.0001 9.16666 15.0001C10.7777 15.0001 12.2349 14.3481 13.2914 13.2915C14.348 12.235 15 10.7778 15 9.16675C15 5.94509 12.3883 3.33341 9.16666 3.33341ZM1.66666 9.16675C1.66666 5.02461 5.02452 1.66675 9.16666 1.66675C13.3088 1.66675 16.6667 5.02461 16.6667 9.16675C16.6667 10.9373 16.0524 12.5654 15.0265 13.8481L18.0892 16.9108C18.4147 17.2363 18.4147 17.7639 18.0892 18.0893C17.7638 18.4148 17.2362 18.4148 16.9107 18.0893L13.848 15.0266C12.5653 16.0525 10.9372 16.6667 9.16666 16.6667C5.02452 16.6667 1.66666 13.3089 1.66666 9.16675Z' fill='%2374808A'/%3E%3C/svg%3E%0A");
   background-position: 16px center;
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: 6px;
   display: inline-block;
   padding: 16px 24px 16px 44px;
@@ -648,13 +654,13 @@ button {
 
 /* ACCESS BANNER */
 .access-banner {
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: 6px;
   margin-block-start: 32px;
   overflow: hidden;
 }
 .access-banner-header {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   display: flex;
   padding: 16px;
 }
@@ -674,7 +680,7 @@ button {
   flex-shrink: 0;
 }
 .access-banner-body {
-  border-top: thin solid #CCC;
+  border-top: thin solid #ccc;
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -693,9 +699,9 @@ button {
   background-color: #333;
   border-radius: 6px;
   bottom: 0;
-  color: #FFF;
+  color: #fff;
   display: flex;
-  fill: #FFF;
+  fill: #fff;
   font-size: 14px;
   left: 50%;
   line-height: 20px;
@@ -737,7 +743,7 @@ button {
 
 /* ARTICLE FEEDBACK */
 .article-feedback {
-  border-block-start: thin solid #EEE;
+  border-block-start: thin solid #eee;
   margin-block-start: 32px;
   margin-inline-start: -32px;
   margin-inline-end: -32px;
@@ -757,20 +763,20 @@ button {
 .article-feedback-button {
   background-color: #333;
   border-radius: 4px;
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   line-height: 20px;
   padding: 8px 12px;
 }
 .article-feedback-button.secondary {
-  background-color: #EEE;
+  background-color: #eee;
   color: #333;
 }
 .article-feedback-button + .article-feedback-button {
   margin-inline-start: 8px;
 }
 .article-feedback-input {
-  border: thin solid #CCC;
+  border: thin solid #ccc;
   border-radius: 4px;
   font-size: 14px;
   line-height: 20px;
@@ -783,7 +789,7 @@ button {
   border-color: #666;
 }
 .article-feedback-input.invalid {
-  background-color: #FEE;
+  background-color: #fee;
   border-color: #600;
   color: #300;
 }
@@ -824,6 +830,7 @@ button {
   width: 100%;
   will-change: opacity, transform, visibility;
 }
+
 .loading-bar.hidden {
   opacity: 0;
   visibility: hidden;
