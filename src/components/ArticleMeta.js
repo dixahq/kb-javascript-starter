@@ -1,15 +1,15 @@
-import React from "react";
-import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/components/trans";
-import { useArticle } from "@elevio/kb-kit/lib/hooks";
-import AccessBanner from "./AccessBanner";
+import React from 'react';
+import cx from 'classnames';
+import { Trans } from '@elevio/kb-kit/lib/components/trans';
+import { useArticle } from '@elevio/kb-kit/lib/hooks';
+import AccessBanner from './AccessBanner';
 
 function ArticleMeta({ className }) {
   const article = useArticle();
   if (!article) return null;
   return (
     <>
-      <div className={cx("article-meta", className)}>
+      <div className={cx('article-meta', className)}>
         <div className="article-meta-item">
           <svg
             className="article-meta-icon"
@@ -21,7 +21,7 @@ function ArticleMeta({ className }) {
           </svg>
           <div className="article-meta-label">
             <Trans i18nKey="article.writtenBy">
-              Written By{" "}
+              Written By{' '}
               {{
                 name: article.author.name,
               }}
@@ -39,7 +39,10 @@ function ArticleMeta({ className }) {
           </svg>
           <div className="article-meta-label">
             <Trans i18nKey="article.lastUpdated">
-              Last updated {{ relativeUpdated: article.lastPublishedAgo }}
+              Last updated{' '}
+              {{
+                relativeUpdated: article.lastPublishedAgo,
+              }}
             </Trans>
           </div>
         </div>

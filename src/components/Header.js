@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import cx from "classnames";
-import { Trans } from "@elevio/kb-kit/lib/components/trans";
-import * as Search from "@elevio/kb-kit/lib/components/search";
-import { useLanguages } from "@elevio/kb-kit/lib/hooks";
-import { Logo } from "./Logo";
-import LoginLogout from "./LoginLogout";
-import LanguagePicker from "./LanguagePicker";
+import React, { useState } from 'react';
+import cx from 'classnames';
+import { Trans } from '@elevio/kb-kit/lib/components/trans';
+import * as Search from '@elevio/kb-kit/lib/components/search';
+import { useLanguages } from '@elevio/kb-kit/lib/hooks';
+import { Logo } from './Logo';
+import LoginLogout from './LoginLogout';
+import LanguagePicker from './LanguagePicker';
 
 function Header({ children, className, hideSearch }) {
   const [displaySearchBar, setDisplaySearchBar] = useState(false);
@@ -16,7 +16,7 @@ function Header({ children, className, hideSearch }) {
     setCurrentLanguageId,
   } = useLanguages();
   return (
-    <header className={cx("header", className)} data-testid="header">
+    <header className={cx('header', className)} data-testid="header">
       <div className="header-wrapper">
         <nav className="nav" aria-label="navigation">
           <div className="nav-wrapper">

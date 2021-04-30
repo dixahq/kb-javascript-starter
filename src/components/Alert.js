@@ -1,13 +1,13 @@
-import React from "react";
-import cx from "classnames";
-import { useNotifications } from "@elevio/kb-kit/lib/hooks";
+import React from 'react';
+import cx from 'classnames';
+import { useNotifications } from '@elevio/kb-kit/lib/hooks';
 
 function Alert({ className }) {
   const { notification, clearNotification } = useNotifications();
   if (!notification) return null;
   const colourClass = getNotificationColour(notification.type);
   return (
-    <div role="alert" className={cx("alert", className, colourClass)}>
+    <div role="alert" className={cx('alert', className, colourClass)}>
       <div className="alert-message" data-testid="alert-message">
         {notification.message}
       </div>
@@ -24,11 +24,11 @@ export default Alert;
 
 const getNotificationColour = (type) => {
   switch (type) {
-    case "success":
-      return "alert-success";
+    case 'success':
+      return 'alert-success';
 
-    case "error":
+    case 'error':
     default:
-      return "alert-danger";
+      return 'alert-danger';
   }
 };
