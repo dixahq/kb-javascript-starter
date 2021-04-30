@@ -49,8 +49,8 @@
     "loadmore": "Load more",
     "shortplaceholder": "Search...",
     "placeholder": "Search our help centre...",
-    "count": "We found {{count}} articles for <6>\"{{searchTerm}}\"</6>",
-    "count_plural": "We found {{count}} articles for <6>\"{{searchTerm}}\"</6>",
+    "count": "We found {{count}} articles for <4>\"{{searchTerm}}\"</4>",
+    "count_plural": "We found {{count}} articles for <4>\"{{searchTerm}}\"</4>",
     "noResults": "Sorry we couldn’t find anything for “<1></1>”",
     "tryAgain": "Try another search or <1>Browse by category</1>"
   },
