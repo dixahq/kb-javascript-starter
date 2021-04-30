@@ -1,4 +1,4 @@
-# Elevio KB Javascript starter
+# Elevio KB JavaScript starter
 
 This repo provides a basis for your custom Elevio KB.
 
@@ -23,7 +23,7 @@ To get the TOKEN you you will need to log into HQ as the account of the company 
 
 ### Saving a version
 
-See https://www.notion.so/elevio/Deployment-276f72b95e6e4d0080f9f94da74bea7c for more details
+See [Deployment](https://kb-kit.elevio.help/en/articles/11-deployment) for more details
 
 When you want to save a version of the KB you are working on to see it working on production you can run the following command.
 
