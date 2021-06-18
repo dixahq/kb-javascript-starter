@@ -2,14 +2,21 @@
 
 This repo provides a basis for your custom Elevio KB.
 
-## Instalation
+## Quick Start Guide
 
-Clone
-.env
+The best place to start is the [Quick Start Guide](https://kb-kit.elevio.help/en/articles/8).
 
-## settings.json file
+## Installation
 
-Update accountId
+```bash
+git clone git@github.com:dixahq/kb-javascript-starter.git
+```
+
+## `settings.json` file
+
+This file gives you control over certain features in your Knowledge Base.
+
+For detailed information on `settings.json` please visit our documentation: [ClientSettings](https://kb-kit.elevio.help/en/articles/81#clientsettings) and the [Quick Start Guide](https://kb-kit.elevio.help/en/articles/8)
 
 ## .env
 

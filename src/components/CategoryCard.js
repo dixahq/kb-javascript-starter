@@ -6,8 +6,12 @@ import * as Category from '@elevio/kb-kit/lib/components/category';
 import * as Meta from '@elevio/kb-kit/lib/components/meta';
 
 function CategoryCard({ categoryId, className }) {
-  const category = useCategory(categoryId);
-  const { totalCount } = useArticles(categoryId);
+  const category = useCategory({
+    categoryId,
+  });
+  const { totalCount } = useArticles({
+    categoryId,
+  });
   if (!category) return null;
   const subCategoriesCount = (category.subCategories || []).length;
   return (

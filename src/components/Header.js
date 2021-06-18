@@ -10,11 +10,8 @@ import LanguagePicker from './LanguagePicker';
 function Header({ children, className, hideSearch }) {
   const [displaySearchBar, setDisplaySearchBar] = useState(false);
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
-  const {
-    supportedLanguages,
-    selectedLanguage,
-    setCurrentLanguageId,
-  } = useLanguages();
+  const { supportedLanguages, selectedLanguage, setCurrentLanguageId } =
+    useLanguages();
   return (
     <header className={cx('header', className)} data-testid="header">
       <div className="header-wrapper">

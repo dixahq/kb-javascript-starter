@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { AccessLevel } from '@elevio/kb-kit/lib/types';
-import { useArticle } from '@elevio/kb-kit/lib/hooks';
+import { useArticleFull } from '@elevio/kb-kit/lib/hooks';
 
 function AccessBanner() {
-  const article = useArticle();
+  const article = useArticleFull();
   const [showing, setShowing] = useState(false);
   if (!article) throw new Error('No article in AccessBanner');
   const { isInternal, smartGroups, access } = article.accessControl;
