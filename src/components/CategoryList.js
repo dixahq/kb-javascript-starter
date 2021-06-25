@@ -5,8 +5,8 @@ import * as Category from '@elevio/kb-kit/lib/components/category';
 import * as Categories from '@elevio/kb-kit/lib/components/categories';
 
 function CategoryList({ className }) {
-  const categories = useCategories();
-  if (!categories || categories.categories.length === 0) return null;
+  const { totalCount } = useCategories();
+  if (totalCount === 0) return null;
   return (
     <div className={className}>
       <h3>
