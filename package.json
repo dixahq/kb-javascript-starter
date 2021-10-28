@@ -1,6 +1,6 @@
 {
   "name": "@elevio/kb-javascript-starter",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "description": "This is a JavaScript starter kit for Dixa's KB builder project",
   "main": "src/index.js",
   "scripts": {
