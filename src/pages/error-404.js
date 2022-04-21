@@ -1,11 +1,11 @@
 import * as React from 'react';
-import * as Search from '@elevio/kb-kit/lib/components/search';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { useTranslation } from '@elevio/kb-kit/lib/hooks';
 import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ErrorPage from '../components/ErrorPage';
+import SearchInput from '../components/SearchInput';
 
 function Page() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ function Page() {
           </Trans>
         </p>
 
-        <Search.Input
+        <SearchInput
           placeholder={t('search.placeholder', 'Search our help centre...')}
           className="error-search"
         />

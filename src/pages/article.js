@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Article from '@elevio/kb-kit/lib/components/article';
-import * as Search from '@elevio/kb-kit/lib/components/search';
+import SearchInput from '../components/SearchInput';
 import { useTranslation } from '@elevio/kb-kit/lib/hooks';
 import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
@@ -40,7 +40,7 @@ function Page() {
         </Main>
 
         <Aside>
-          <Search.Input
+          <SearchInput
             className="sidebar-search"
             placeholder={t('search.shortplaceholder', 'Search...')}
             data-testid="article-search-input"

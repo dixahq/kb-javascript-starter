@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from '@elevio/kb-kit/lib/hooks';
 import * as Category from '@elevio/kb-kit/lib/components/category';
-import * as Search from '@elevio/kb-kit/lib/components/search';
 import * as Article from '@elevio/kb-kit/lib/components/article';
 import * as Articles from '@elevio/kb-kit/lib/components/articles';
 import PageLayout from '../components/layouts/Page';
@@ -13,6 +12,7 @@ import WithAsideLayout, {
   MainHeader,
   MainBody,
 } from '../components/layouts/WithAside';
+import SearchInput from '../components/SearchInput';
 import Breadcrumb from '../components/PageBreadcrumbs';
 import CategoryList from '../components/CategoryList';
 
@@ -46,7 +46,7 @@ function Page() {
         </Main>
 
         <Aside>
-          <Search.Input
+          <SearchInput
             className="sidebar-search"
             placeholder={t('search.shortplaceholder', 'Search...')}
             data-testid="category-search-input"
