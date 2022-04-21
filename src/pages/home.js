@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { useTranslation } from '@elevio/kb-kit/lib/hooks';
-import * as Search from '@elevio/kb-kit/lib/components/search';
 import * as Categories from '@elevio/kb-kit/lib/components/categories';
 import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
@@ -12,6 +11,7 @@ import {
   GridItem,
 } from '../components/layouts/Main';
 import CategoryCard from '../components/CategoryCard';
+import SearchInput from '../components/SearchInput';
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ const HomePage = () => {
               Here you will find documentation on how to use our product.
             </Trans>
           </h1>
-          <Search.Input
+          <SearchInput
             placeholder={t('search.placeholder', 'Search our help centre...')}
             data-testid="search-input"
             className="hero-search"

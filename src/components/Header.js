@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
-import * as Search from '@elevio/kb-kit/lib/components/search';
 import { useLanguages } from '@elevio/kb-kit/lib/hooks';
+import SearchInput from '../components/SearchInput';
 import { Logo } from './Logo';
 import LoginLogout from './LoginLogout';
 import LanguagePicker from './LanguagePicker';
@@ -84,7 +84,7 @@ function Header({ children, className, hideSearch }) {
         {displaySearchBar && !hideSearch && (
           <div className="mobile-search">
             <div className="mobile-search-wrapper">
-              <Search.Input className="mobile-search-input" />
+              <SearchInput className="mobile-search-input" />
             </div>
           </div>
         )}

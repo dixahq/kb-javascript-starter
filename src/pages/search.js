@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as Search from '@elevio/kb-kit/lib/components/search';
 import * as SearchResults from '@elevio/kb-kit/lib/components/searchResults';
 import { HomeLink } from '@elevio/kb-kit/lib/components/meta';
 import { useSearchResults, useTranslation } from '@elevio/kb-kit/lib/hooks';
@@ -10,6 +9,7 @@ import Footer from '../components/Footer';
 import { MainCentered } from '../components/layouts/Main';
 import SearchResult from '../components/SearchResult';
 import SearchMore from '../components/SearchMore';
+import SearchInput from '../components/SearchInput';
 
 const Page = () => {
   const { t } = useTranslation();
@@ -37,7 +37,7 @@ const Page = () => {
             </p>
           </SearchResults.IsNotEmpty>
 
-          <Search.Input
+          <SearchInput
             className="hero-search"
             placeholder={t('search.placeholder', 'Search our help centre...')}
           />

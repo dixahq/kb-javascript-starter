@@ -1,3 +1,4 @@
+import { Config, SearchStyle } from '@elevio/kb-kit/lib/Config';
 import Loader from './components/Loader';
 import ArticlePage from './pages/article';
 import CategoryPage from './pages/category';
@@ -31,5 +32,6 @@ const config = {
     },
   },
   pageLoadingIndicator: Loader,
+  searchStyle: SearchStyle.dropdown,
 };
 export default config;
