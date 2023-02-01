@@ -18,11 +18,25 @@ This file gives you control over certain features in your Knowledge Base.
 
 For detailed information on `settings.json` please visit our documentation: [ClientSettings](https://kb-kit.elevio.help/en/articles/81#clientsettings) and the [Quick Start Guide](https://kb-kit.elevio.help/en/articles/8)
 
+You must ensure that you fill in an `accountId` in your `settings.json` file or the command line interface will fail when you try `npm run start`:
+
+```shell
+> npm run start
+>
+> @elevio/kb-javascript-starter@0.2.9 start
+> elevio-kb dev
+
+fetching settings
+Missing company UID header
+```
+
+You can easily get your accountId from [app.elev.io/account](https://app.elev.io/account)
+
 ## .env
 
-When you want to work on a KB you will need to create a .env file in that repo. This file is git ignored so you will have to create it for each KB you work on.
+When you want to work on a KB you will also need to create a .env file in its repo. This file is git ignored so you will have to create it for each KB you work on.
 
-There is an example .env file named .env.example in the root dir.
+There is an example `.env` file named `.env.example` in the root dir.
 
 To get the TOKEN you you will need to log into HQ as the account of the company you want to publish a KB for. Then visit the URL https://app.elev.io/token and grab the Permanent key.
 
