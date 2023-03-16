@@ -12,7 +12,6 @@ import {
 } from '../components/layouts/Main';
 import CategoryCard from '../components/CategoryCard';
 import SearchInput from '../components/SearchInput';
-
 const HomePage = () => {
   const { t } = useTranslation();
   return (
@@ -46,5 +45,4 @@ const HomePage = () => {
     </PageLayout>
   );
 };
-
 export default HomePage;

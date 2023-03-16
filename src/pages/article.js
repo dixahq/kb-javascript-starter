@@ -17,7 +17,6 @@ import Breadcrumb from '../components/PageBreadcrumbs';
 import ArticleMeta from '../components/ArticleMeta';
 import ArticleActions from '../components/ArticleActions';
 import ArticleFeedback from '../components/ArticleFeedback';
-
 function Page() {
   const { t } = useTranslation();
   return (
@@ -52,5 +51,4 @@ function Page() {
     </PageLayout>
   );
 }
-
 export default Page;

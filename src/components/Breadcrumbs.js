@@ -4,7 +4,6 @@ import * as Meta from '@elevio/kb-kit/lib/components/meta';
 import * as Category from '@elevio/kb-kit/lib/components/category';
 import * as Article from '@elevio/kb-kit/lib/components/article';
 import { IBreadCrumb } from '@elevio/kb-kit/lib/types';
-
 function Breadcrumb({ className, crumbs, noLinks }) {
   return (
     <div className={cx('breadcrumbs', className)}>
@@ -19,12 +18,10 @@ function Breadcrumb({ className, crumbs, noLinks }) {
     </div>
   );
 }
-
 function Crumb({ noLinks, crumb, className }) {
   if (noLinks) {
     return <span className={className}>{crumb.title}</span>;
   }
-
   if (crumb.linkType === 'article') {
     return (
       <Article.Link articleId={crumb.linkId} className={className}>
@@ -32,7 +29,6 @@ function Crumb({ noLinks, crumb, className }) {
       </Article.Link>
     );
   }
-
   if (crumb.linkType === 'category') {
     return (
       <Category.Link categoryId={crumb.linkId} className={className}>
@@ -40,8 +36,6 @@ function Crumb({ noLinks, crumb, className }) {
       </Category.Link>
     );
   }
-
   return <Meta.HomeLink className={className}>{crumb.title}</Meta.HomeLink>;
 }
-
 export default Breadcrumb;

@@ -1,10 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
-
 function WithAside({ children, className }) {
   return <section className="with-aside">{children}</section>;
 }
-
 export default WithAside;
 export function Aside({ children, className, ...props }) {
   return (
@@ -13,7 +11,6 @@ export function Aside({ children, className, ...props }) {
     </aside>
   );
 }
-
 function MainContentCard({ children, className, ...props }) {
   return (
     <div className={cx('main-content-card', className)} {...props}>
@@ -21,7 +18,6 @@ function MainContentCard({ children, className, ...props }) {
     </div>
   );
 }
-
 export function Main({ children, className, ...props }) {
   return (
     <main className={cx('main', className)} {...props}>

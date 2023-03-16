@@ -3,7 +3,6 @@ import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { useCategories } from '@elevio/kb-kit/lib/hooks';
 import * as Category from '@elevio/kb-kit/lib/components/category';
 import * as Categories from '@elevio/kb-kit/lib/components/categories';
-
 function CategoryList({ className }) {
   const { totalCount } = useCategories();
   if (totalCount === 0) return null;
@@ -24,5 +23,4 @@ function CategoryList({ className }) {
     </div>
   );
 }
-
 export default CategoryList;

@@ -5,7 +5,6 @@ import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ErrorPage from '../components/ErrorPage';
-
 const Page = () => {
   const { t } = useTranslation();
   return (
@@ -20,5 +19,4 @@ const Page = () => {
     </PageLayout>
   );
 };
-
 export default Page;

@@ -5,7 +5,6 @@ import PageLayout from '../components/layouts/Page';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ErrorPage from '../components/ErrorPage';
-
 function Page() {
   return (
     <PageLayout header={<Header />} footer={<Footer />}>
@@ -20,5 +19,4 @@ function Page() {
     </PageLayout>
   );
 }
-
 export default Page;

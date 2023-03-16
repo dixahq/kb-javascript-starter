@@ -13,9 +13,7 @@ export function FeedbackInitial({
     'articleFeedback.question',
     'Did this article help solve your problem?'
   );
-
   const _title = title || defaultTitle;
-
   return (
     <div
       className={cx('article-feedback', className)}
@@ -45,7 +43,6 @@ export function FeedbackInitial({
     </div>
   );
 }
-
 const FeedbackError = ({ className }) => {
   const { t } = useTranslation();
   return (
@@ -57,7 +54,6 @@ const FeedbackError = ({ className }) => {
     </div>
   );
 };
-
 export const FeedbackSuccess = ({ className }) => {
   const { t } = useTranslation();
   return (
@@ -66,7 +62,6 @@ export const FeedbackSuccess = ({ className }) => {
     </div>
   );
 };
-
 function ErrorMessage({ error }) {
   if (!error) return null;
   return (
@@ -75,7 +70,6 @@ function ErrorMessage({ error }) {
     </div>
   );
 }
-
 const EmailBox = ({ error, ...props }) => {
   const { t } = useTranslation();
   return (
@@ -92,7 +86,6 @@ const EmailBox = ({ error, ...props }) => {
     </>
   );
 };
-
 const MessageBox = ({ error, ...props }) => {
   const { t } = useTranslation();
   return (
@@ -112,7 +105,6 @@ const MessageBox = ({ error, ...props }) => {
     </>
   );
 };
-
 const SubmitButton = ({ disabled }) => {
   const { t } = useTranslation();
   const classes = cx('submit', {
@@ -127,7 +119,8 @@ const SubmitButton = ({ disabled }) => {
     >
       {t('articleFeedback.submit', 'Submit')}
     </button>
-  ); // return null;
+  );
+  // return null;
 };
 
 export function FeedbackForm({
@@ -201,7 +194,6 @@ export function FeedbackForm({
     </form>
   );
 }
-
 function ArticleFeedback({ className }) {
   const {
     stage,
@@ -220,13 +212,13 @@ function ArticleFeedback({ className }) {
     onFeedbackSkipped,
     handleMessageChange,
     handleEmailChange,
-  } = useArticleFeedback(); // return null;
+  } = useArticleFeedback();
 
+  // return null;
   if (!isFeedbackEnabled) return null;
   if (stage === 'error') return <FeedbackError className={className} />;
   if (stage === 'positive' || stage === 'submitted')
     return <FeedbackSuccess className={className} />;
-
   if (stage === 'negative') {
     return (
       <FeedbackForm
@@ -245,7 +237,6 @@ function ArticleFeedback({ className }) {
       />
     );
   }
-
   return (
     <FeedbackInitial
       className={className}
@@ -255,5 +246,4 @@ function ArticleFeedback({ className }) {
     />
   );
 }
-
 export default ArticleFeedback;

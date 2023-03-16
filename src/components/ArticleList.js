@@ -3,7 +3,6 @@ import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { useArticles } from '@elevio/kb-kit/lib/hooks';
 import * as Article from '@elevio/kb-kit/lib/components/article';
 import * as Articles from '@elevio/kb-kit/lib/components/articles';
-
 function ArticleList({ className }) {
   const { totalCount } = useArticles();
   if (totalCount === 0) return null;
@@ -35,5 +34,4 @@ function ArticleList({ className }) {
     </div>
   );
 }
-
 export default ArticleList;

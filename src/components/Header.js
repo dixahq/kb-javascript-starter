@@ -6,7 +6,6 @@ import SearchInput from '../components/SearchInput';
 import { Logo } from './Logo';
 import LoginLogout from './LoginLogout';
 import LanguagePicker from './LanguagePicker';
-
 function Header({ children, className, hideSearch }) {
   const [displaySearchBar, setDisplaySearchBar] = useState(false);
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
@@ -98,5 +97,4 @@ function Header({ children, className, hideSearch }) {
     </header>
   );
 }
-
 export default Header;

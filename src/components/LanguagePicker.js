@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 function LanguagePicker({
   selectedLanguageId,
   setCurrentLanguageId,
@@ -61,5 +60,4 @@ function LanguagePicker({
     </div>
   );
 }
-
 export default LanguagePicker;
