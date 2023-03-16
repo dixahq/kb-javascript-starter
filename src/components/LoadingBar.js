@@ -1,7 +1,6 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { useLoading } from '@elevio/kb-kit/lib/hooks';
-
 const LoadingBar = ({ className, style, ...props }) => {
   const { percent, status } = useLoading();
   const loadingStyle = {
@@ -16,5 +15,4 @@ const LoadingBar = ({ className, style, ...props }) => {
     />
   );
 };
-
 export default LoadingBar;

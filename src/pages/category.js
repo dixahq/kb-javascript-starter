@@ -15,7 +15,6 @@ import WithAsideLayout, {
 import SearchInput from '../components/SearchInput';
 import Breadcrumb from '../components/PageBreadcrumbs';
 import CategoryList from '../components/CategoryList';
-
 function Page() {
   const { t } = useTranslation();
   return (
@@ -57,5 +56,4 @@ function Page() {
     </PageLayout>
   );
 }
-
 export default Page;

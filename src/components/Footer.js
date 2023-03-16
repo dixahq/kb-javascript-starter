@@ -2,7 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import LoginLogout from './LoginLogout';
-
 function Footer({ className }) {
   return (
     <footer className={cx('footer', className)} data-testid="footer">
@@ -20,5 +19,4 @@ function Footer({ className }) {
     </footer>
   );
 }
-
 export default Footer;

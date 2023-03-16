@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { AccessLevel } from '@elevio/kb-kit/lib/types';
 import { useArticleFull } from '@elevio/kb-kit/lib/hooks';
-
 function AccessBanner() {
   const article = useArticleFull();
   const [showing, setShowing] = useState(false);
@@ -70,5 +69,4 @@ function AccessBanner() {
     </div>
   );
 }
-
 export default AccessBanner;

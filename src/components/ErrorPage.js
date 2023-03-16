@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 import { useTranslation } from '@elevio/kb-kit/lib/hooks';
-
 function ErrorPage({ children, title, className }) {
   const { t } = useTranslation();
   const defaultTitle = t('error.defaultTitle');
@@ -12,5 +11,4 @@ function ErrorPage({ children, title, className }) {
     </section>
   );
 }
-
 export default ErrorPage;

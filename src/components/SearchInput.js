@@ -6,7 +6,6 @@ import { useSearch } from '@elevio/kb-kit/lib/hooks/useSearch';
 import { useSearchResults } from '@elevio/kb-kit/lib/hooks/useSearchResults';
 import { useOnClickOutside } from '@elevio/kb-kit/lib/hooks/useOnClickOutside';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
-
 const SearchInput = ({ className, placeholder, ...props }) => {
   const { isOpen } = useSearch();
   const ref = React.useRef(null);
@@ -21,14 +20,13 @@ const SearchInput = ({ className, placeholder, ...props }) => {
     </div>
   );
 };
-
 export default SearchInput;
-
 const SearchDropdown = ({ outerRef }) => {
   const { onCloseDropdown, value } = useSearch();
-  const { isFetching, searchTerm } = useSearchResults(); // Because a "mobile" search is rendered there could be two search inputs rendered.
-  // Make sure that we are shown before triggering the hiding of the results
+  const { isFetching, searchTerm } = useSearchResults();
 
+  // Because a "mobile" search is rendered there could be two search inputs rendered.
+  // Make sure that we are shown before triggering the hiding of the results
   const cb = React.useCallback(() => {
     const display = window.getComputedStyle(
       outerRef.current.querySelector('[data-testid="search-input"]')
@@ -38,7 +36,6 @@ const SearchDropdown = ({ outerRef }) => {
   }, []);
   useOnClickOutside(outerRef, cb);
   if (value.length === 0) return null;
-
   if (isFetching) {
     return (
       <Dropdown>
@@ -46,7 +43,6 @@ const SearchDropdown = ({ outerRef }) => {
       </Dropdown>
     );
   }
-
   if (value !== searchTerm) {
     return (
       <Dropdown>
@@ -61,7 +57,6 @@ const SearchDropdown = ({ outerRef }) => {
       </Dropdown>
     );
   }
-
   return (
     <Dropdown>
       <SearchResults.LoopResults>
@@ -77,7 +72,6 @@ const SearchDropdown = ({ outerRef }) => {
     </Dropdown>
   );
 };
-
 const Dropdown = ({ children }) => {
   return (
     <div className="dropdown">
@@ -87,15 +81,12 @@ const Dropdown = ({ children }) => {
     </div>
   );
 };
-
 const NoResults = ({ children }) => <div className="noResults">{children}</div>;
-
 const Loading = () => (
   <div className="mainLoadingView">
     <span className="loadingRoot" />
   </div>
 );
-
 const ArticleTitle = () => {
   return (
     <SearchResults.ArticleLink

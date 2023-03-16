@@ -10,7 +10,6 @@ import { MainCentered } from '../components/layouts/Main';
 import SearchResult from '../components/SearchResult';
 import SearchMore from '../components/SearchMore';
 import SearchInput from '../components/SearchInput';
-
 const Page = () => {
   const { t } = useTranslation();
   const { searchTerm, totalCount } = useSearchResults();
@@ -70,5 +69,4 @@ const Page = () => {
     </PageLayout>
   );
 };
-
 export default Page;

@@ -6,7 +6,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ErrorPage from '../components/ErrorPage';
 import SearchInput from '../components/SearchInput';
-
 function Page() {
   const { t } = useTranslation();
   return (
@@ -35,5 +34,4 @@ function Page() {
     </PageLayout>
   );
 }
-
 export default Page;

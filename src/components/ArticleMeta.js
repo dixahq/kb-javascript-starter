@@ -3,7 +3,6 @@ import cx from 'classnames';
 import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { useArticleFull } from '@elevio/kb-kit/lib/hooks';
 import AccessBanner from './AccessBanner';
-
 function ArticleMeta({ className }) {
   const article = useArticleFull();
   if (!article) return null;
@@ -51,5 +50,4 @@ function ArticleMeta({ className }) {
     </>
   );
 }
-
 export default ArticleMeta;

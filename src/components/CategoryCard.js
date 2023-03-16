@@ -4,7 +4,6 @@ import { Trans } from '@elevio/kb-kit/lib/components/trans';
 import { useArticles, useCategory } from '@elevio/kb-kit/lib/hooks';
 import * as Category from '@elevio/kb-kit/lib/components/category';
 import * as Meta from '@elevio/kb-kit/lib/components/meta';
-
 function CategoryCard({ categoryId, className }) {
   const category = useCategory({
     categoryId,
@@ -54,5 +53,4 @@ function CategoryCard({ categoryId, className }) {
     </Category.Link>
   );
 }
-
 export default CategoryCard;
