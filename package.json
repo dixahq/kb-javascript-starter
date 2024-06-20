@@ -23,5 +23,8 @@
   },
   "license": "MIT",
   "private": true,
-  "overrides": { "glob-parent": "^5.1.2" }
+  "overrides": {
+    "glob-parent": "^5.1.2",
+    "braces": "3.0.3"
+  }
 }
